@@ -1,0 +1,46 @@
+{
+  "name": "roll-sso",
+  "version": "0.1.0",
+  "description": "roll Sigle Sign One app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roll-social-network/roll-ui.git"
+  },
+  "keywords": [
+    "roll",
+    "sso",
+    "single",
+    "sign",
+    "one",
+    "social",
+    "network"
+  ],
+  "author": "roll devs <devs@r.oll.world>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roll-social-network/roll-ui/issues"
+  },
+  "homepage": "https://github.com/roll-social-network/roll-ui#readme",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "roll-ui": "file:ui"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
