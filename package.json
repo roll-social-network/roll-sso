@@ -31,7 +31,9 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "roll-ui": "file:ui"
+    "roll-node": "file:lib",
+    "roll-ui": "file:ui",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@types/node": "^20",
