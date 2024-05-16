@@ -1,5 +1,14 @@
-import RollPage from '@/app/components/RollPage'
-import Home from '@/app/components/pages/Home'
+import { getCurrentSite } from '@/roll'
 
-const Page = () => (<RollPage component={Home} />)
-export default Page
+const HomePage = async () => {
+  const currentSite = await getCurrentSite()
+
+  return (
+    <div>
+      <div>current site:</div>
+      <pre>{JSON.stringify(currentSite, null, 2)}</pre>
+    </div>
+  )
+}
+
+export default HomePage

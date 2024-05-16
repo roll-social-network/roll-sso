@@ -2,13 +2,18 @@ import {
   Header,
   Footer
 } from 'roll-ui'
-import '@/styles/main.css'
+import { getCurrentSite } from '@/roll'
+import type { Metadata } from 'next'
 
-type rootLayoutParams = Readonly<{
-  children: React.ReactNode;
-}>
+export const generateMetadata = async (): Promise<Metadata> => {
+  const currentSite = await getCurrentSite()
 
-const Layout = ({ children }: rootLayoutParams) => {
+  return {
+    title: currentSite.name
+  }
+}
+
+const Layout = ({ children }: { children: React.ReactNode}) => {
   return (
     <html lang="en">
       <body>
