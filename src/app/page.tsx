@@ -1,12 +1,12 @@
-import { getCurrentSite } from '@/roll'
+import UserDetails from '@/app/components/UserDetails'
+import { getCurrentUser } from '@/app/roll'
 
 const HomePage = async () => {
-  const currentSite = await getCurrentSite()
+  const currentUser = await getCurrentUser()
 
   return (
     <div>
-      <div>current site:</div>
-      <pre>{JSON.stringify(currentSite, null, 2)}</pre>
+      <UserDetails user={currentUser} />
     </div>
   )
 }

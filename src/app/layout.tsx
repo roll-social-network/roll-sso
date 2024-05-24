@@ -2,8 +2,9 @@ import {
   Header,
   Footer
 } from 'roll-ui'
-import { getCurrentSite } from '@/roll'
+import { getCurrentSite } from '@/app/roll'
 import type { Metadata } from 'next'
+import '@/styles/main.css'
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const currentSite = await getCurrentSite()
@@ -13,11 +14,19 @@ export const generateMetadata = async (): Promise<Metadata> => {
   }
 }
 
+const LayoutHeader = async () => {
+  const currentSite = await getCurrentSite()
+
+  return (
+    <Header title={currentSite.name} />
+  )
+}
+
 const Layout = ({ children }: { children: React.ReactNode}) => {
   return (
     <html lang="en">
       <body>
-        <Header />
+        <LayoutHeader />
         {children}
         <Footer />
       </body>
