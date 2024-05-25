@@ -30,9 +30,10 @@ export const getRoll = () => {
   }
 
   const protocol = hdrs.get('x-forwarded-proto') || undefined
+  const baseUrl = protocol && host ? `${protocol}://${host}` : undefined
 
   return new Roll({
-    baseUrl: host && protocol ? `${protocol}://${rollDomain}` : undefined,
+    baseUrl,
     rollDomain,
     userToken,
   })
