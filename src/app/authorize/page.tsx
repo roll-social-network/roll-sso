@@ -25,7 +25,7 @@ const AuthorizePage = async ({ searchParams }: { searchParams: AuthorizeParams }
   }
 
   return (
-    <div>
+    <section>
       <h2>Authorize {application.name}?</h2>
       <p>Application requires the following permissions:</p>
       <ul>
@@ -34,7 +34,7 @@ const AuthorizePage = async ({ searchParams }: { searchParams: AuthorizeParams }
       <form action={allow}>
         <p><button type="submit">Authorize</button></p>
       </form>
-    </div>
+    </section>
   )
 }
 

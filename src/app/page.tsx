@@ -6,7 +6,9 @@ const HomePage = async () => {
 
   return (
     <div>
-      <UserDetails user={currentUser} />
+      <section>
+        <UserDetails user={currentUser} />
+      </section>
     </div>
   )
 }

@@ -19,11 +19,11 @@ const RequestVerificationCode = async ({ params, searchParams }: { params: { pho
   } catch (e) {
     if (e instanceof FormValidationError) {
       return (
-        <div>
+        <section>
           <ul>
             {e.fields.phoneNumber?.map((error, i) => (<li key={i}>{error}</li>))}
           </ul>
-        </div>
+        </section>
       )
     }
     throw e
